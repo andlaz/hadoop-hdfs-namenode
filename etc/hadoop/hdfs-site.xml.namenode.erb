@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<configuration>
+	<!-- Name Node daemon -->
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value><%= @name_dir %></value>
+	</property>
+	<property>
+  		<name>dfs.replication</name>
+  		<value><%= @hdfs_replication_factor %></value>
+  	</property>
+	<property>
+  		<name>dfs.blocksize</name>
+  		<value><%= @hdfs_block_size %></value>
+  	</property>
+	<property>
+		<name>dfs.namenode.rpc-bind-host</name>
+		<value>0.0.0.0</value>
+	</property>
+	<property>
+		<name>dfs.namenode.rpc-address</name>
+		<value>0.0.0.0:8020</value>
+	</property>
+	<property>
+		<name>dfs.namenode.http-address</name>
+		<value>0.0.0.0:50070</value>
+	</property>
+</configuration>
