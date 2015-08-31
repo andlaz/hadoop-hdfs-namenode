@@ -54,7 +54,8 @@ class Configure < Thor
   
   @@hdfs_options = {
     :tmp_dir => { :default => "/var/lib/hdfs/tmp", :desc => "HDFS temp dir" },
-    :fs_host => { :required => true, :desc => "Host to listen on for HDFS clients" }
+    :fs_host => { :required => true, :desc => "Host to listen on for HDFS clients" },
+    :fs_port => { :default => 8020 }
 
   }
   
