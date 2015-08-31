@@ -94,7 +94,6 @@ class Configure < Thor
   end
   
   options @@hdfs_options
-  option :fs_port, :default => 8020, :desc => "HDFS primary Name Node RPC port"
   option :name_web_ui_port, :default => 50070, :desc => "HDFS primary Name Node Web UI port"
   option :secondary_name_dir, :default => "/var/lib/hdfs/namesecondary", :desc => "Directory to store secondary name ( dfs ) data"
   desc "namesecondary", "Configure the HDFS secondary Name Node"
