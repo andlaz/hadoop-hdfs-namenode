@@ -32,8 +32,8 @@ add_secondary_namenode_options () {
 }
 
 case $1 in
-	namenode) ruby /root/configure.rb $* `add_namenode_options` && supervisord -c /etc/supervisord.conf ;;
-	namenodesecondary) ruby /root/configure.rb $* `add_secondary_namenode_options` && supervisord -c /etc/supervisord.conf ;;
+	namenode) ruby /root/configure.rb $* `add_namenode_options $*` && supervisord -c /etc/supervisord.conf ;;
+	namenodesecondary) ruby /root/configure.rb $* `add_secondary_namenode_options $*` && supervisord -c /etc/supervisord.conf ;;
 	help) cat << EOM
 The image's entry point script will populate the following -parameters from Docker environment variables:
 EOM
